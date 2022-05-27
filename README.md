@@ -1,9 +1,7 @@
 ## What
----
 這是一個測試如何用 verdaccio 及 babel 來打包一個 Create-React-App 專案。
 ___
 ## verdaccio
----
 verdaccio 提供了私人的 npm proxy 伺服器，你可以在本地端開發相關 libraies 並上傳至 verdaccio 供整個團隊使用。
 
 1. 安裝：`npm i -g verdaccio`   
@@ -27,7 +25,6 @@ registry="http://localhost:4873/"
 4. 執行: `npm publish --registry http://localhost:4873` 打包上傳。
 ___
 ## React / Babel
----
 ### 1. 資料夾結構
 ```js
 ├── App.css
@@ -83,3 +80,6 @@ preset: [
 首先執行 `npm run build` 會發現根目錄多出了一個 `dist` 資料夾  
 這時候只要再執行 `npm publish --registry="http://localhost:4873"`
 就可以在 `verdaccio` 看到你上傳的 library 啦:heart_eyes:
+
+## 參考資源
+- [Publish React components as an npm package](https://levelup.gitconnected.com/publish-react-components-as-an-npm-package-7a671a2fb7f) by JB
